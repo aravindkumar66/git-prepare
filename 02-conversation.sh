@@ -1,5 +1,5 @@
 #!/bin/bash
 
-#ramesh: hi suresh
-#suresh: hi ra how are you
+echo "ramesh: hi suresh"
+echo "suresh: hi ra how are you"
 
