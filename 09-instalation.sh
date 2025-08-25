@@ -6,6 +6,7 @@
 
  then 
     echo "please run this script with root prvilizes"
+    #exit 1
 
  fi
 
