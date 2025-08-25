@@ -3,7 +3,14 @@
 
   validate()
     {
-        echo "exit status: $1"
+        if [ $1 -ne 0 ]
+        then
+            echo "$2 is ... FAILED"
+            exit 1
+        else
+            echo "$2 is ... SUCESS" 
+        fi    
+
     }
 
   if [ $USERID -ne 0 ]
@@ -12,7 +19,7 @@
     exit 1
   fi
 
-  dnf list installed mysql
+  dnf list installed git
 
-  validate $?
+  validate $? "Listing GIT"
 
