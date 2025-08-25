@@ -21,5 +21,5 @@
 
   dnf list installed mysql
 
-  validate  "Listing mysql"
+  validate $? "Listing mysql"
 

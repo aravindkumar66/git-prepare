@@ -10,14 +10,14 @@
 
 #  fi
  
- dnf list installed git
+ dnf list installed mysql
 
  if [ $? -ne 0 ]
 
  then 
    echo "git is not installed, going to install git"
 
-   dnf install git -y
+   dnf install mysql  -y
 
  else
    echo "git is installed"
