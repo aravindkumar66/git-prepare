@@ -19,7 +19,7 @@
     exit 1
   fi
 
-  dnf list installed git
+  dnf list installed mysql
 
-  validate $? "Listing GIT"
+  validate $? "Listing mysql"
 
