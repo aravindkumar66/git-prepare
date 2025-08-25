@@ -1,15 +1,15 @@
  #!/bin/bash
 
- USER=$(id -u)
+#  USER=$(id -u)
 
- if [ $USER -ne 0 ]
+#  if [ $USER -ne 0 ]
 
- then 
-    echo "please run this script with root prvilizes"
-    exit 1
+#  then 
+#     echo "please run this script with root prvilizes"
+#     exit 1
 
- fi
-
+#  fi
+ 
  dnf list installed git
 
  if [ $? -ne 0 ]
