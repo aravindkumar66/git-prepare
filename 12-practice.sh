@@ -9,11 +9,10 @@
 
     if [ $1 -ne 0 ]
     then
-        echo "$2..... is failed"
+        echo -e "$2 is...$R FAILED $N"
         exit 1
     else
-        echo "$2.... is sucess"
-
+        echo -e "$2 is... $G SUCCESS $N"
     fi    
  }
 
