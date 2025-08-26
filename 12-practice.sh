@@ -18,7 +18,7 @@
  then
     echo "please run this script with root previlizes"
     exit 1
- if
+ fi
 
  dnf list installed mysql 
 
