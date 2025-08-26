@@ -28,7 +28,7 @@
     then
         echo "$package is not installed, going to install"
         dnf install $package -y
-        validate $? installing $package
+        validate $? "installing $package"
     else
         echo "$package is already installed.. nothing to do"
     fi
