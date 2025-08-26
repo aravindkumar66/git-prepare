@@ -21,12 +21,15 @@
     exit 1
  fi
 
- dnf list installed myssql
- if [ $? -ne 0 ]
- then
-    echo "mysql is not installed, going to install"
-    dnf install mysql -y
-    validate $? installing mysql
- else
-    echo "mysql is already installed.. nothing to do"
- fi
+ for package in $@
+ do
+    dnf list installed $package
+    if [ $? -ne 0 ]
+    then
+        echo "$package is not installed, going to install"
+        dnf install $packagesql -y
+        validate $? installing $package
+    else
+        echo "$package is already installed.. nothing to do"
+    fi
+ done
