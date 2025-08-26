@@ -29,5 +29,5 @@
     validate $? "installing mysql"
  else
     echo "mysql is already installed, nothind to do"
- fi  
+ fi    
 
