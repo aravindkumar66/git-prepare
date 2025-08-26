@@ -32,4 +32,16 @@
     echo "mysql is already installed, nothing to do"
  fi
 
+  dnf list installed git 
+
+ if [ $? -ne 0 ]
+ then
+    echo "git not installed, go and install"
+    dnf install -y git
+
+    validate $? installing git
+ else 
+    echo "git is already installed, nothing to do"
+ fi
+
  
