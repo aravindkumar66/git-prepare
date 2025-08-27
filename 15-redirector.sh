@@ -21,10 +21,10 @@
 
     if [ $1 -ne 0 ]
     then
-        echo -e "$2 is...$R FAILED $N" $>>$LOG_FILE
+        echo -e "$2 is...$R FAILED $N" | tee -a $LOG_FILE
         exit 1
     else
-        echo -e "$2 is... $G SUCCESS $N" $>>$LOG_FILE
+        echo -e "$2 is... $G SUCCESS $N" | tee -a $LOG_FILE
     fi    
  }
 
@@ -33,7 +33,7 @@
     exit 1
  }
 
- echo "script started executing at: $(date)" $>>$LOG_FILE
+ echo "script started executing at: $(date)" | tee -a $LOG_FILE
 
 
  if [ $# -eq 0 ]
@@ -46,10 +46,10 @@
     dnf list installed $package $>>$LOG_FILE
     if [ $? -ne 0 ]
     then
-        echo "$package is not installed, going to install" $>>$LOG_FILE
+        echo "$package is not installed, going to install" | tee -a $LOG_FILE
         dnf install $package -y
         validate $? "installing $package"
     else
-        echo -e "$package is already $Y installed.. nothing to do $N" $>>$LOG_FILE
+        echo -e "$package is already $Y installed.. nothing to do $N" | tee -a $LOG_FILE
     fi
  done
