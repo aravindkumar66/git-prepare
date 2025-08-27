@@ -22,10 +22,20 @@
     fi    
  }
 
+ USAGE(){
+    echo -e "$R USAGE:: $N sudo sh 16-redirectors.sh package1 package2 ..."
+    exit 1
+ }
+
  if [ $USERID -ne 0 ]
  then
     echo -e "$R please run this script with root previlizes $N" $>>$LOG_FILE
     exit 1
+ fi
+
+ if [ $# -eq 0 ]
+ then
+    USAGE
  fi
 
   for package in $@
