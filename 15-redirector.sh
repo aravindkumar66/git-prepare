@@ -10,6 +10,12 @@
  G="\e[32m"
  N="\e[0m"
  Y="\e[33m"
+
+  if [ $USERID -ne 0 ]
+ then
+    echo -e "$R please run this script with root previlizes $N" | tee -a $LOG_FILE
+    exit 1
+ fi
  
  validate() {
 
@@ -29,11 +35,6 @@
 
  echo "script started executing at: $(date)"
 
- if [ $USERID -ne 0 ]
- then
-    echo -e "$R please run this script with root previlizes $N" $>>$LOG_FILE
-    exit 1
- fi
 
  if [ $# -eq 0 ]
  then
