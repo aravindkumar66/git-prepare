@@ -27,6 +27,8 @@
     exit 1
  }
 
+ echo "script started executing at: $(date)"
+
  if [ $USERID -ne 0 ]
  then
     echo -e "$R please run this script with root previlizes $N" $>>$LOG_FILE
