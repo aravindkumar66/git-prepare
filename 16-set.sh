@@ -1,6 +1,6 @@
  #!/bin/bash
 
- set -e #exit automatically if we get error
+ set -ex #exit automatically if we get error
  echo "Hello World"
  echoo "Welcome to java city"
- echo "learning java language"
+ echo "learning java language error in above"
