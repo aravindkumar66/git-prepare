@@ -18,6 +18,7 @@ echo "fiels: $FILES"
 while read -r FILE 
 do
     echo "deleting files are: $FILE"
+    rm -rf $FILE
 
 done <<< $FILES
 
