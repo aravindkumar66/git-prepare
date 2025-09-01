@@ -6,14 +6,20 @@ Source=/home/ec2-user/logs
 
 if [ -d $Source ]
 then 
-    echo "$Source files is exisits"
+    echo "$Source directory is exisits"
     
 else
-    echo "$Source file is not exists"
+    echo "$Source directory is not exists"
     exit 1
 fi
 FILES=$(find ${Source} -name "*.log" -mtime +30)
 echo "fiels: $FILES"
+
+while read -r FILE 
+do
+    echo "deleting files are: $FILE"
+
+done <<< $FILES
 
 # if [ -d $SOURCE_DIR ]
 # then
