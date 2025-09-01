@@ -4,7 +4,7 @@
 Source= /home/ec2-user/logs
 
 
-if [-d $Source]
+if [ -d $Source ]
 then 
     echo "$Source files is exisits"
     
