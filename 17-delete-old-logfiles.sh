@@ -12,7 +12,7 @@ else
     echo "$Source file is not exists"
     exit 1
 fi
-FILES=$(find ${Source} -name "*.logs" -mtime +30)
+FILES=$(find ${Source} -name "*.log" -mtime +30)
 echo "fiels: $FILES"
 
 # if [ -d $SOURCE_DIR ]
