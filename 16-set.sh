@@ -1,6 +1,6 @@
  #!/bin/bash
 
- failuer(){
+ failure(){
     echo "failed at: $1 $2"
  }
 
