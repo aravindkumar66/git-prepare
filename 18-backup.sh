@@ -1,23 +1,32 @@
 #!/bin/bash
 
-Source_Dir=$s1
-Dest_Dir=$s2
-Days=${3:-14}
+SOURCE_DIR=$1
+DEST_DIR=${2}
+DAYS=${3:-14} #if $3 is empty, default is 14 days.
+TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
+
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+Y="\e[33m"
 
 USAGE(){
+    echo -e "$R USAGE:: $N sh 19-backup.sh <source> <destination> <days(optional)>"
+}
+#check the source and destination are provided
 
-    echo "USAGE: 18-backup.sh <source> <destination> <days(optional)>"
-} 
-if [ $# -lt 2 ] 
+if [ $# -lt 2 ]
 then
     USAGE
+    exit 1
 fi
 
+if [ ! -d $SOURCE_DIR ]
+then
+    echo "$SOURCE_DIR does not exist...Please check"
+fi
 
-
-# if [ $# -lt 2]
-# then
-#     echo "Source_Dir and Dest_Dir are exist"
-# else
-#     cho "Source_Dir and Dest_Dir are does not exist"
-# fi
+if [ ! -d $DEST_DIR ]
+then
+    echo "$DEST_DIR does not exist...Please check"
+fi
