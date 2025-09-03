@@ -1,14 +1,14 @@
 #!/bin/bash
 
-Source_Dir = $s1
-Dest_Dir = $s2
-Days = ${3:-14}
+Source_Dir=$s1
+Dest_Dir=$s2
+Days=${3:-14}
 
 USAGE(){
 
     echo "USAGE: 18-backup.sh <source> <destination> <days(optional)>"
 } 
-if [ $# -lt 2]
+if [ $# -lt 2 ] 
 then
     USGE
 fi
