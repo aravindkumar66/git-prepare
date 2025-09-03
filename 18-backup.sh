@@ -10,7 +10,7 @@ USAGE(){
 } 
 if [ $# -lt 2 ] 
 then
-    USGE
+    USAGE
 fi
 
 
